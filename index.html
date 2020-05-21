@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="quiz.css"/>
+	<title>Quiz z sieci</title>
+</head>
+
+<body>
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firesore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA_gCYvezCa6VoWlmClHM7n6XRH34FRL0Y",
+    authDomain: "site-ba108.firebaseapp.com",
+    databaseURL: "https://site-ba108.firebaseio.com",
+    projectId: "site-ba108",
+    storageBucket: "site-ba108.appspot.com",
+    messagingSenderId: "880074091656",
+    appId: "1:880074091656:web:767c3dd29b01af6ae9033d",
+    measurementId: "G-HK8H12YM0L"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.database();
+  firebase.firestore();
+  
+  function change_page(){
+	
+    window.location.href = "1.html";
+	
+} 
+</script>
+
+<button id="start" onclick="change_page()" >START QUIZ</button>
+<img id="mozg" src="mózg.gif" width="300px" height="300px"/>
+
+</body>
+
+</html>
