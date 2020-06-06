@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Quiz</title>
+    <script>
+
+        var points = 0;
+
+        function resultt(){
+                
+                
+                    
+                        document.getElementById("result").style.display = "block";
+                        document.getElementById("ocena").innerHTML = points;
+                        
+                        
+                    
+                
+            
+        }
+        function exit(){
+            document.getElementById("result").style.display = "none";
+            document.documentElement.scrollTop = 0;
+            location.reload();
+        }
+        function check(){
+                if(document.getElementById("input").value = "WAN, MAN, LAN, WLAN, PAN" || "WAN, MAN, LAN, PAN" || "WAN MAN LAN PAN" ){
+                        points++;
+                        document.getElementById("submit1").disabled = true;
+
+                }else
+                {
+                    document.getElementById("submit1").disabled = true;
+                }
+
+
+        }
+        function check_button(){
+                    if(document.getElementById("true").clicked == true){
+                        points++
+                        document.getElementById("true").disabled = true;
+                        document.getElementById("false").disabled = true;
+                    }else if(document.getElementById("false").clicked == true){
+                        document.getElementById("true").disabled = true;
+                        document.getElementById("false").disabled = true;
+                    }
+
+        }
+    </script>
+</head>
+<body>
+
+
+        <h1 id="title">Quiz Z WIEDZY O SIECI</h1>
+
+       
+             <h1 id="pytanie1">Wypisz typy sieci od najbardziej rozległej do najmniej rozległej <br> (typy są 4, posługuj się skrutami)</h1>
+                <input type="text" id="input" size="50"/>
+                <input type="submit" id="submit1"onclick="check()">
+                
+                
+            <h1 id="pytanie2">W jakim modelu sieci komputer w ramach danej usługi może być jednocześnie klijentem oraz serwerem?</h1>
+                <input type="text" id="input5" size="50"/>
+                <input type="submit" id="submit2" onclick="">
+
+
+            <h1 id="pytanie3">Jaka warstwa w modelu TCP/IP odpowiada za dostarczanie informacji do użądzenia docelowego?</h1>
+                <input type="text" id="input2" size="50"/>
+                <input type="submit" id="submit3" onclick="">
+
+
+
+            <h1 id="pytanie4">Podaj 2 protokoły występujace w warstwie transportu <br> (używaj skrutów)</h1>
+                <input type="text" id="input3" size="50"/>
+                <input type="submit" id="submit4" onclick="">
+
+
+
+            <h1 id="pytanie5">Jaki protokół wykożystany będzie podczas streamingu gry?</h1>
+                <button id="true" onclick="check_button()">UDP</button>
+                <button id="false" onclick="check_button()">TCP</button>
+       
+            
+
+            <h1 id="pytanie6">Rozwinięcie skrutu DNS to</h1>
+               
+                
+                <button id="truee">Domain Name System</button>
+                <button id="falsee">Distant Network Service</button>
+
+
+
+            <h1 id="pytanie7">W jakiej topologii sieci wszystkie użądzienia są podpięte do jedngo kable?</h1>
+                <button id="trueee">Topologia magistrali</button>
+                <button id="falseee">Topologia gwiazfy</button>
+        
+
+            <button id="check" onclick="resultt()" href="result">SPRAWDŹ</button><br><br>
+
+            <div id="result">
+
+
+                <span id="ocena"></span> 
+
+                
+
+            
+
+                <button id="SPRÓBUJ_PONOWNIE" onclick="exit()">SPRÓBUJ PONOWNIE</button>
+
+
+                
+            </div>
+                <h1>. </h1><br>
+                <h1>. </h1><br>
+                <h1>.</h1><br>
+                <h1>. </h1><br>
+                <h1>. </h1><br>
+                <h1>. </h1><br>
+                <h1>. </h1><br>
+                <h1>.</h1><br>
+                <h1>. </h1><br>
+                <h1>. </h1><br>
+                <h1>. </h1><br>
+                <h1>. </h1><br>
+                <h1>.</h1><br>
+                <h1>. </h1><br>
+                <h1>. </h1><br>
+                
+               
+
+
+    
+
+</body>
+</html>
