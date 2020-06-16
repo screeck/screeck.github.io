@@ -12,7 +12,31 @@
                 
                     
                         document.getElementById("result").style.display = "block";
-                        document.getElementById("ocena").innerHTML = points;
+                        // document.getElementById("ocena").innerHTML = points;
+                        if(points <= 2)
+                        {
+                            document.getElementById("ocena").innerHTML = 1;
+                        }
+                        else if(points > 2 && points < 4)
+                        {
+                            document.getElementById("ocena").innerHTML = 2;
+                        }
+                        else if(points > 3 && points < 5)
+                        {
+                            document.getElementById("ocena").innerHTML = 3;
+                        }
+                        else if(points > 4 && points < 6)
+                        {
+                            document.getElementById("ocena").innerHTML = 4;
+                        }
+                        else if(points > 5 && points < 7)
+                        {
+                            document.getElementById("ocena").innerHTML = 5;
+                        }
+                        else if(points > 6 && points < 8)
+                        {
+                            document.getElementById("ocena").innerHTML = 6;
+                        }
                         
                         
                     
@@ -25,27 +49,187 @@
             location.reload();
         }
         function check(){
-                if(document.getElementById("input").value = "WAN, MAN, LAN, WLAN, PAN" || "WAN, MAN, LAN, PAN" || "WAN MAN LAN PAN" ){
-                        points++;
-                        document.getElementById("submit1").disabled = true;
+            let btn = document.getElementById('submit1');
+            let input = document.getElementById('input');
+            let answers = ['WAN, MAN, LAN, WLAN, PAN', 'WAN, MAN, LAN, PAN', 'WAN MAN LAN PAN'];
+            let answer;
 
-                }else
-                {
-                    document.getElementById("submit1").disabled = true;
-                }
+            
 
 
-        }
+               
+                    for (let i = 0; i < answers.length; i++) {
+      // Keep in mind the strict comparator is being used here in the conditional "==="
+      // capitolization will be key to returning true value as well as white space trimming in the input value
+                    if (input.value === answers[i]) {
+        // Now run code for correct answer and iterate a point
+        //console.log(answer + ' Correct!')
+                    points++;
+                       document.getElementById("submit1").disabled = true;
+
+                 }else
+                 {
+                     document.getElementById("submit1").disabled = true;
+                 }
+
+
+        
+     }
+   
+    
+   
+  }
+  function check2(){
+            let btn = document.getElementById('submit2');
+            let input = document.getElementById('input5');
+            let answers = ['IPv6'];
+            let answer;
+
+            
+
+
+               
+                    for (let i = 0; i < answers.length; i++) {
+      // Keep in mind the strict comparator is being used here in the conditional "==="
+      // capitolization will be key to returning true value as well as white space trimming in the input value
+                    if (input.value === answers[i]) {
+        // Now run code for correct answer and iterate a point
+        //console.log(answer + ' Correct!')
+                    points++;
+                       document.getElementById("submit2").disabled = true;
+
+                 }else
+                 {
+                     document.getElementById("submit2").disabled = true;
+                 }
+
+
+        
+     }
+   
+    
+   
+  }
+  function check3(){
+            let btn = document.getElementById('submit3');
+            let input = document.getElementById('input2');
+            let answers = ['Warstwa internetu','warstwa internetu','Warstwa Internetu','WARSTWA INTERNETU'];
+            let answer;
+
+            
+
+
+               
+                    for (let i = 0; i < answers.length; i++) {
+      // Keep in mind the strict comparator is being used here in the conditional "==="
+      // capitolization will be key to returning true value as well as white space trimming in the input value
+                    if (input.value === answers[i]) {
+        // Now run code for correct answer and iterate a point
+        //console.log(answer + ' Correct!')
+                    points++;
+                       document.getElementById("submit3").disabled = true;
+
+                 }else
+                 {
+                     document.getElementById("submit3").disabled = true;
+                 }
+
+
+        
+     }
+   
+    
+   
+  }
+  function check4(){
+            let btn = document.getElementById('submit4');
+            let input = document.getElementById('input3');
+            let answers = ['tcp,udp', 'TCP,UDP','tcp, udp','TCP,UDP', 'TCP UDP', 'tcp udp'];
+            let answer;
+
+            
+
+
+               
+                    for (let i = 0; i < answers.length; i++) {
+      // Keep in mind the strict comparator is being used here in the conditional "==="
+      // capitolization will be key to returning true value as well as white space trimming in the input value
+                    if (input.value === answers[i]) {
+        // Now run code for correct answer and iterate a point
+        //console.log(answer + ' Correct!')
+                    points++;
+                       document.getElementById("submit4").disabled = true;
+
+                 }else
+                 {
+                     document.getElementById("submit4").disabled = true;
+                 }
+
+
+        
+     }
+   
+    
+   
+  }
+
+
+
+
+                
+
+
+        
         function check_button(){
-                    if(document.getElementById("true").clicked == true){
+                    if(document.getElementById("true").clicked = true){
                         points++
                         document.getElementById("true").disabled = true;
                         document.getElementById("false").disabled = true;
-                    }else if(document.getElementById("false").clicked == true){
+
+                    }
+
+        }
+
+        function check_button_false(){
+
+            if(document.getElementById("false").clicked = true){
                         document.getElementById("true").disabled = true;
                         document.getElementById("false").disabled = true;
                     }
+        }
+        function check_button2(){
+                    if(document.getElementById("truee").clicked = true){
+                        points++
+                        document.getElementById("truee").disabled = true;
+                        document.getElementById("falsee").disabled = true;
 
+                    }
+
+        }
+
+        function check_button_false2(){
+
+            if(document.getElementById("falsee").clicked = true){
+                        document.getElementById("truee").disabled = true;
+                        document.getElementById("falsee").disabled = true;
+                    }
+        }
+        function check_button3(){
+                    if(document.getElementById("trueee").clicked = true){
+                        points++
+                        document.getElementById("trueee").disabled = true;
+                        document.getElementById("falseee").disabled = true;
+
+                    }
+
+        }
+
+        function check_button_false3(){
+
+            if(document.getElementById("falseee").clicked = true){
+                        document.getElementById("trueee").disabled = true;
+                        document.getElementById("falseee").disabled = true;
+                    }
         }
     </script>
 </head>
@@ -60,40 +244,40 @@
                 <input type="submit" id="submit1"onclick="check()">
                 
                 
-            <h1 id="pytanie2">W jakim modelu sieci komputer w ramach danej usługi może być jednocześnie klijentem oraz serwerem?</h1>
+            <h1 id="pytanie2">fe8d::a08c:9255:8dd7 -> Podany adres IP należy do typu: IPv4 czy IPv6?</h1>
                 <input type="text" id="input5" size="50"/>
-                <input type="submit" id="submit2" onclick="">
+                <input type="submit" id="submit2" onclick="check2()">
 
 
             <h1 id="pytanie3">Jaka warstwa w modelu TCP/IP odpowiada za dostarczanie informacji do użądzenia docelowego?</h1>
                 <input type="text" id="input2" size="50"/>
-                <input type="submit" id="submit3" onclick="">
+                <input type="submit" id="submit3" onclick="check3()">
 
 
 
             <h1 id="pytanie4">Podaj 2 protokoły występujace w warstwie transportu <br> (używaj skrutów)</h1>
                 <input type="text" id="input3" size="50"/>
-                <input type="submit" id="submit4" onclick="">
+                <input type="submit" id="submit4" onclick="check4()">
 
 
 
             <h1 id="pytanie5">Jaki protokół wykożystany będzie podczas streamingu gry?</h1>
                 <button id="true" onclick="check_button()">UDP</button>
-                <button id="false" onclick="check_button()">TCP</button>
+                <button id="false" onclick="check_button_false()">TCP</button>
        
             
 
             <h1 id="pytanie6">Rozwinięcie skrutu DNS to</h1>
                
                 
-                <button id="truee">Domain Name System</button>
-                <button id="falsee">Distant Network Service</button>
+                <button id="truee" onclick="check_button2()">Domain Name System</button>
+                <button id="falsee"onclick="check_button_false2()">Distant Network Service</button>
 
 
 
             <h1 id="pytanie7">W jakiej topologii sieci wszystkie użądzienia są podpięte do jedngo kable?</h1>
-                <button id="trueee">Topologia magistrali</button>
-                <button id="falseee">Topologia gwiazfy</button>
+                <button id="trueee" onclick="check_button3()">Topologia magistrali</button>
+                <button id="falseee"onclick="check_button_false3()">Topologia gwiazfy</button>
         
 
             <button id="check" onclick="resultt()" href="result">SPRAWDŹ</button><br><br>
